@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponItem : MonoBehaviour
+namespace DarkSoul
 {
-    // Start is called before the first frame update
-    void Start()
+    [CreateAssetMenu(menuName ="Item/Weapon Item")]
+    public class WeaponItem : Item
     {
-        
-    }
+        public GameObject modelPrefab;
+        public bool isUnarmed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        [Header("One Handed Attack Animations")]
+        public string OH_Light_Attack_1;
+        public string OH_Heavy_Attack_1;
+
     }
 }
+

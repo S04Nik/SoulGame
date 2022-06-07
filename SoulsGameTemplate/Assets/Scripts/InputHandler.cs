@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -14,15 +12,26 @@ namespace DarkSoul
         public float mouseY;
 
         public bool b_input;
+        public bool rb_input;
+        public bool rt_input;
+
         public bool rollFlag;
         public bool sprintFlag;
         public float rollInputTimer;
-        PlayerControls inputActions;
-        CameraHandler cameraHandler;
 
+        PlayerControls inputActions;
+        PlayerAttacker playerAttacker;
+        PlayerInventory playerInventory;
+
+        CameraHandler cameraHandler;
         Vector2 movementInput;
         Vector2 cameraInput;
 
+        private void Awake()
+        {
+            playerAttacker = GetComponent<PlayerAttacker>();
+            playerInventory = GetComponent<PlayerInventory>();
+        }
 
         public void OnEnable()
         {
@@ -38,15 +47,19 @@ namespace DarkSoul
             inputActions.Enable();
 
         }
+            
         private void OnDisable()
         {
             inputActions.Disable();
         }
+
         public void TickInput(float delta)
         {
             MoveInput(delta);
             HandleRollingInput(delta);
+            HandleAttackInput(delta);
         }
+
         private void MoveInput(float delta)
         {
             horizontal = movementInput.x;
@@ -55,6 +68,7 @@ namespace DarkSoul
             mouseX = cameraInput.x;
             mouseY = cameraInput.y;
         }
+
         private void HandleRollingInput(float delta)
         {
             //b_input = inputActions.PlayerActions.Roll.phase == UnityEngine.InputSystem.InputActionPhase.Started;            
@@ -74,6 +88,21 @@ namespace DarkSoul
             }
         }
 
+        private void HandleAttackInput(float delta)
+        {
+            inputActions.PlayerActions.RB.performed += i => rb_input = true;
+            inputActions.PlayerActions.RT.performed += i => rt_input = true;
+
+            if (rb_input)
+            {
+                playerAttacker.HandleLightAttack(playerInventory.rightWeapon);
+            }
+
+            if (rt_input)
+            {
+                playerAttacker.HandleHeavyAttack(playerInventory.rightWeapon);
+            }
+        }
     }
 
 }

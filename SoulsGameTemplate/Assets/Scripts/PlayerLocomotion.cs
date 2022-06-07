@@ -93,13 +93,25 @@ namespace DarkSoul
 
             float speed = movementSpeed;
 
-            if (inputHandler.sprintFlag)
+            if (inputHandler.sprintFlag && inputHandler.moveAmount > 0.5f)
             {
                 speed = sprintSpeed;
                 playerManager.isSprinting = true;
                 moveDirection *= speed;
             }else
-                moveDirection *= speed;
+            {
+                if (inputHandler.moveAmount < 0.5f)
+                {
+                    moveDirection *= movementSpeed;
+                    playerManager.isSprinting = false;
+                }
+                else
+                {
+                    moveDirection *= speed;
+                    playerManager.isSprinting = false; 
+                }
+            }
+               
 
             Vector3 projectedVelocity = Vector3.ProjectOnPlane(moveDirection, normalVector);
             rb.velocity = projectedVelocity;
@@ -152,7 +164,7 @@ namespace DarkSoul
             if (playerManager.isInAir)
             {
                 rb.AddForce(-Vector3.up * fallingSpeed);
-                rb.AddForce(moveDirection * fallingSpeed / 10f);
+                rb.AddForce(moveDirection * fallingSpeed / 8f);
             }
 
             Vector3 dir = moveDirection;
@@ -178,7 +190,7 @@ namespace DarkSoul
                     }
                     else
                     {
-                        animatorHandler.PlayTargetAnimation("Locomotion", false);
+                        animatorHandler.PlayTargetAnimation("Empty", false);
                         inAirTimer = 0;
                     }
                     playerManager.isInAir = false;

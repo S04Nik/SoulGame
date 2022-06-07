@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Water
+  m_Shader: {fileID: -6465566751694194690, guid: 23106f874134eca429c0c2c53d89802c, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_398f9c1e8f234b05bbc6b14318bf951e:
+        m_Texture: {fileID: 2800000, guid: c21511cdc86c86847bdae740c8b071da, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_8022e28de48b43afaea4f4eb3f0454d7:
+        m_Texture: {fileID: 2800000, guid: 25fd4376f156aa843964ce73e403189a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_0345cbb6bc5644f5ad0fc5f3b1461e93: -2
+    - Vector1_21d7dfe27c1f460e8d38aa5cbd2896de: 0.15
+    - Vector1_31a1782a7ff24cc2ac229c935d6a04c6: 0.7
+    - Vector1_a9450a0d18dc40ee9be2c29e4adbab13: 0.8
+    - Vector1_b2109294de3c43758f5b97ab013a4819: 0.3
+    - Vector1_d4c5c4470e4f497b9f578e7cd164a763: -0.5
+    - Vector1_e060fe3a423d4eea8284dbe1d05b1d11: 1
+    - Vector1_e0c283910d34430cab957b18cad744e9: 10
+    - Vector1_ee787c98843c474bb18a8322dcc89a90: 0.7
+    - Vector1_ff12937b22ed4dc69759a0175d1e4147: 1
+    m_Colors:
+    - Color_0f75478c46cf42fe9a2d59b58f2dc17b: {r: 0.12160911, g: 0.40960014, b: 0.5283019, a: 0}
+    - Color_13334bfbff804b688df8e60341bdf8b9: {r: 0.16375932, g: 0.68601924, b: 0.9433962, a: 0}
+    - Color_1a5f3af372914ddbbb84f8cc80524a18: {r: 1, g: 0, b: 0.0509634, a: 0}
+    - Color_596599b8d1a243468dd701b56f657daf: {r: 0, g: 0.51029146, b: 0.6603774, a: 0}
+    - Color_a0f42d7313a749ceb4d14ab15a427c85: {r: 0.011196132, g: 0.27220994, b: 0.3490566, a: 0}
+    - Vector2_6803f9209f2b49c8816d6f4e39fe0b9d: {r: 0, g: 1, b: 0, a: 0}
+  m_BuildTextureStacks: []
