@@ -6,9 +6,11 @@ namespace DarkSoul
 {
     public class WeaponHolderSlot : MonoBehaviour
     {
+        public WeaponItem currentWeapon;
         public Transform parentOverride;
         public bool isLeftHandSlot;
         public bool isRightHandSlot;
+        public bool isBackSlot;
 
         public GameObject currentWeaponModel;
 

@@ -1179,6 +1179,7 @@ m_PackageAssets:
         - 1.0.0
         - 2.0.0
         - 2.0.1
+        - 2.0.2
         compatible:
         - 0.1.4-preview
         - 0.1.5-preview
@@ -1200,6 +1201,7 @@ m_PackageAssets:
         - 1.0.0
         - 2.0.0
         - 2.0.1
+        - 2.0.2
         verified: 
       dependencies:
       - name: com.unity.sysroot
@@ -3870,6 +3872,7 @@ m_PackageAssets:
         - 4.6.0-preview
         - 4.7.0-preview
         - 4.9.1
+        - 4.9.2
         compatible:
         - 4.0.0-preview
         - 4.0.0
@@ -3886,6 +3889,7 @@ m_PackageAssets:
         - 4.6.0-preview
         - 4.7.0-preview
         - 4.9.1
+        - 4.9.2
         verified: 4.3.2
       dependencies: []
       resolvedDependencies: []
